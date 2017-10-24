@@ -20,6 +20,29 @@
 	<string>1</string>
 	<key>IOKitPersonalities</key>
 	<dict>
+		<key>NVDAStartup</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.nvidia.NVDAStartupWeb</string>
+			<key>IOClass</key>
+			<string>NVDAStartupWeb</string>
+			<key>IOMatchCategory</key>
+			<string>IOFramebuffer</string>
+			<key>IOPCIClassMatch</key>
+			<string>0x03000000&amp;0xff000000</string>
+			<key>IOPCIMatch</key>
+			<string>0x000010de&amp;0x0000ffff</string>
+			<key>IOPCITunnelCompatible</key>
+			<true/>
+			<key>IOProbeScore</key>
+			<integer>200000</integer>
+			<key>IOProviderClass</key>
+			<string>IOPCIDevice</string>
+			<key>NVDARequiredOS</key>
+			<string>17A405</string>
+			<key>NVDAType</key>
+			<string>Web</string>
+		</dict>
 		<key>CreateDevices</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
