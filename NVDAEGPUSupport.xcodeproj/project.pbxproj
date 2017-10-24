@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE7555811F9EE7D7008955F2 /* NVDAEGPUSupport.hpp in Headers */ = {isa = PBXBuildFile; fileRef = CE7555801F9EE7D7008955F2 /* NVDAEGPUSupport.hpp */; };
-		CE7555831F9EE7D7008955F2 /* NVDAEGPUSupport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE7555821F9EE7D7008955F2 /* NVDAEGPUSupport.cpp */; };
+		CE75558B1F9EE875008955F2 /* NVDA.h in Headers */ = {isa = PBXBuildFile; fileRef = CE75558A1F9EE875008955F2 /* NVDA.h */; };
+		CE75558E1F9EE89D008955F2 /* IONDRVFramebufferPatched.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE75558C1F9EE89D008955F2 /* IONDRVFramebufferPatched.cpp */; };
+		CE75558F1F9EE89D008955F2 /* IONDRVFramebufferPatched.h in Headers */ = {isa = PBXBuildFile; fileRef = CE75558D1F9EE89D008955F2 /* IONDRVFramebufferPatched.h */; };
+		CE7555921F9EE989008955F2 /* NVDAPatched.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE7555901F9EE989008955F2 /* NVDAPatched.cpp */; };
+		CE7555931F9EE989008955F2 /* NVDAPatched.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7555911F9EE989008955F2 /* NVDAPatched.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE75557D1F9EE7D7008955F2 /* NVDAEGPUSupport.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NVDAEGPUSupport.kext; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE7555801F9EE7D7008955F2 /* NVDAEGPUSupport.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NVDAEGPUSupport.hpp; sourceTree = "<group>"; };
-		CE7555821F9EE7D7008955F2 /* NVDAEGPUSupport.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NVDAEGPUSupport.cpp; sourceTree = "<group>"; };
 		CE7555841F9EE7D7008955F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE75558A1F9EE875008955F2 /* NVDA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVDA.h; sourceTree = "<group>"; };
+		CE75558C1F9EE89D008955F2 /* IONDRVFramebufferPatched.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IONDRVFramebufferPatched.cpp; sourceTree = "<group>"; };
+		CE75558D1F9EE89D008955F2 /* IONDRVFramebufferPatched.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IONDRVFramebufferPatched.h; sourceTree = "<group>"; };
+		CE7555901F9EE989008955F2 /* NVDAPatched.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NVDAPatched.cpp; sourceTree = "<group>"; };
+		CE7555911F9EE989008955F2 /* NVDAPatched.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVDAPatched.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,9 +54,12 @@
 		CE75557F1F9EE7D7008955F2 /* NVDAEGPUSupport */ = {
 			isa = PBXGroup;
 			children = (
-				CE7555801F9EE7D7008955F2 /* NVDAEGPUSupport.hpp */,
-				CE7555821F9EE7D7008955F2 /* NVDAEGPUSupport.cpp */,
+				CE75558A1F9EE875008955F2 /* NVDA.h */,
 				CE7555841F9EE7D7008955F2 /* Info.plist */,
+				CE75558C1F9EE89D008955F2 /* IONDRVFramebufferPatched.cpp */,
+				CE75558D1F9EE89D008955F2 /* IONDRVFramebufferPatched.h */,
+				CE7555901F9EE989008955F2 /* NVDAPatched.cpp */,
+				CE7555911F9EE989008955F2 /* NVDAPatched.h */,
 			);
 			path = NVDAEGPUSupport;
 			sourceTree = "<group>";
@@ -62,7 +71,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE7555811F9EE7D7008955F2 /* NVDAEGPUSupport.hpp in Headers */,
+				CE7555931F9EE989008955F2 /* NVDAPatched.h in Headers */,
+				CE75558B1F9EE875008955F2 /* NVDA.h in Headers */,
+				CE75558F1F9EE89D008955F2 /* IONDRVFramebufferPatched.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,7 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE7555831F9EE7D7008955F2 /* NVDAEGPUSupport.cpp in Sources */,
+				CE7555921F9EE989008955F2 /* NVDAPatched.cpp in Sources */,
+				CE75558E1F9EE89D008955F2 /* IONDRVFramebufferPatched.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
