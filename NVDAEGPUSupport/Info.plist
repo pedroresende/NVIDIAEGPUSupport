@@ -135,6 +135,8 @@
 		<string>9.0.0</string>
 		<key>com.nvidia.web.NVDAResmanWeb</key>
 		<string>10.2.5</string>
+		<key>com.nvidia.web.NVDAResmanTeslaWeb</key>
+		<string>10.2.5</string>
 	</dict>
 	<key>OSBundleRequired</key>
 	<string>Safe Boot</string>
