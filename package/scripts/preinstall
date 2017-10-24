@@ -1,0 +1,65 @@
+#!/usr/bin/perl
+##
+## preinstall script for the web driver and prefpane combo pkg.
+##
+## Usage: Intended to be the preinstall script in the Web driver installer pkg.
+##
+
+use strict;
+use warnings;
+
+## forward declarations
+sub SIPDisabled;
+sub NVIDIAWebInstalled;
+
+my $USER = $ENV{USER};
+
+print "Starting...\n";
+
+## check if web drivers are installed
+if (!NVIDIAWebInstalled())
+{
+    my $cmd = "su $USER -c \"osascript -e 'display alert \\\"NVIDIA Web drivers are not installed.\\\" as critical message \\\"Download and install the NVIDIA Web drivers first.\\\" buttons {\\\"Cancel\\\"} default button \\\"Cancel\\\" cancel button \\\"Cancel\\\"'\"";
+    my $r = system($cmd);
+    exit 1;
+}
+
+## check if SIP is disabled and show a warning
+if (!SIPDisabled())
+{
+    my $cmd = "su $USER -c \"osascript -e 'display alert \\\"SIP is currently enabled.\\\" as critical message \\\"Please run “csrutil enable --without kext” from Terminal in recovery or the installed drivers will not work. Click Continue to proceed or click Cancel to abort the installation process.\\\" buttons {\\\"Cancel\\\", \\\"Continue\\\"} default button \\\"Continue\\\" cancel button \\\"Cancel\\\"'\"";
+    my $r = system($cmd);
+    $r >>= 8;
+    if ($r != 0)
+    {
+        ## the user clicked "Cancel"
+        exit $r;
+    }
+}
+
+## Done
+print "Done\n";
+
+## detect SIP (kext signing) is disabled or not
+sub SIPDisabled()
+{
+    ## check if SIP is competely disabled or at least Kext Signing is disabled
+    my $cmd = "/usr/bin/csrutil status | /usr/bin/egrep 'System Integrity Protection status: disabled|Kext Signing: disabled'";
+    my $r = system($cmd);
+    $r >>= 8;
+    if ($r == 0)
+    {
+        return 1;
+    }
+    return 0;
+}
+
+## detect if NVIDIA web drivers are installed
+sub NVIDIAWebInstalled()
+{
+    if (-e "/Library/Extensions/NVDAStartupWeb.kext")
+    {
+        return 1;
+    }
+    return 0;
+}

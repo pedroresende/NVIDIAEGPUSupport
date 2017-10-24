@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<installer-gui-script minSpecVersion="2">
+    <title>NVIDIA EGPU Support Driver</title>
+    <pkg-ref id="lu.yifan.NVDAEGPUSupport"/>
+    <options customize="never" require-scripts="false" rootVolumeOnly="true"/>
+    <welcome file="Welcome.rtf"/>
+    <volume-check>
+        <allowed-os-versions>
+            <os-version min="10.13"/>
+        </allowed-os-versions>
+        <required-bundles all="true">
+            <bundle CFBundleShortVersionString="10.25.28" id="com.nvidia.NVDAStartupWeb" path="/Library/Extensions/NVDAStartupWeb.kext" search="false"/>
+            <bundle CFBundleShortVersionString="10.25.28" id="com.nvidia.web.NVDAResmanWeb" path="/Library/Extensions/NVDAResmanWeb.kext" search="false"/>
+            <bundle CFBundleShortVersionString="10.25.28" id="com.nvidia.web.NVDAResmanTeslaWeb" path="/Library/Extensions/NVDAResmanTeslaWeb.kext" search="false"/>
+            <bundle CFBundleShortVersionString="517.17" id="com.apple.iokit.IONDRVSupport" path="/System/Library/Extensions/IONDRVSupport.kext" search="false"/>
+        </required-bundles>
+    </volume-check>
+    <choices-outline>
+        <line choice="default">
+            <line choice="lu.yifan.NVDAEGPUSupport"/>
+        </line>
+    </choices-outline>
+    <choice id="default"/>
+    <choice id="lu.yifan.NVDAEGPUSupport" visible="false">
+        <pkg-ref id="lu.yifan.NVDAEGPUSupport" auth="Root" onConclusion="none"/>
+    </choice>
+    <pkg-ref id="lu.yifan.NVDAEGPUSupport" auth="Root" onConclusion="none">NVDAEGPUSupportDriver.pkg</pkg-ref>
+</installer-gui-script>

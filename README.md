@@ -63,10 +63,10 @@ The "fix" here is to bypass this check and we need to do it in two places. `IOND
 
 It is not immediately obvious if this causes any problems, and more research is needed here. I suspect this logic was used to fix some AMD specific race condition with eGPU attachment that is not applicable to NVIDIA drivers (the setup order is different).
 
+### Adding `IOPCITunnelCompatible` key
+
+The old way of doing this is to modify the Info.plist of the relevant driver. But that breaks the signature and also won't survive updates so it seems like too hacky of a solution to me. Instead, I use a little known feature of IOKit which is exporting a personality implemented in another kext. In this case, I copy-pasted the personality from `NVDAStartupWeb.kext` and added the `IOPCITunnelCompatible` key locally but pointed the `CFBundleIdentifier` to NVIDIA's bundle.
+
 ### Implementing GPUWrangler?
 
 I'm not sure if this is needed or not, but in High Sierra, there is this new IOResource called `AppleGPUWrangler` that acts like `IODisplayWrangler` (which handles display plugging/unplugging and stuff) but for GPUs. The logic seems simple enough: extend `AppleGraphicsDeviceControl` and implement a couple of methods which return some vendor specific information. I've tried this and didn't get any different result so I suspect it's not really important if you're not hot-plugging eGPUs (which I don't think works anyways).
-
-### Disabling Metal renderer for WindowServer?
-
-Just an idea but since Apple changed WindowServer to use Metal, maybe that's not supported by NVIDIA drivers?

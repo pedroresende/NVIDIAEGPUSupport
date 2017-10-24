@@ -1,0 +1,17 @@
+#!/usr/bin/perl
+#
+# postinstall perl script
+#
+# - set "nvda_drv" NVRAM variable to "1"
+#
+
+use strict;
+
+# select the web driver
+my $cmd = "nvram nvda_drv=1";
+system("$cmd");
+
+# force rebuild cache
+system("touch /System/Library/Extensions");
+
+# done

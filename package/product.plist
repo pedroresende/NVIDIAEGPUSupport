@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>os</key>
+	<array>
+		<string>10.13</string>
+	</array>
+	<key>bundle</key>
+	<array>
+		<dict>
+			<key>id</key>
+			<string>com.nvidia.NVDAStartupWeb</string>
+			<key>path</key>
+			<string>/Library/Extensions/NVDAStartupWeb.kext</string>
+			<key>CFBundleShortVersionString</key>
+			<string>10.25.28</string>
+		</dict>
+		<dict>
+			<key>id</key>
+			<string>com.nvidia.web.NVDAResmanWeb</string>
+			<key>path</key>
+			<string>/Library/Extensions/NVDAResmanWeb.kext</string>
+			<key>CFBundleShortVersionString</key>
+			<string>10.25.28</string>
+		</dict>
+		<dict>
+			<key>id</key>
+			<string>com.nvidia.web.NVDAResmanTeslaWeb</string>
+			<key>path</key>
+			<string>/Library/Extensions/NVDAResmanTeslaWeb.kext</string>
+			<key>CFBundleShortVersionString</key>
+			<string>10.25.28</string>
+		</dict>
+		<dict>
+			<key>id</key>
+			<string>com.apple.iokit.IONDRVSupport</string>
+			<key>path</key>
+			<string>/System/Library/Extensions/IONDRVSupport.kext</string>
+			<key>CFBundleShortVersionString</key>
+			<string>517.17</string>
+		</dict>
+	</array>
+</dict>
+</plist>
