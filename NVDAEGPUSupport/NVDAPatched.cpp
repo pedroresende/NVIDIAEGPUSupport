@@ -13,12 +13,12 @@ OSDefineMetaClassAndStructors(NVDAPatched, NVDA)
 #define super NVDA
 
 bool NVDAPatched::attach(IOService *provider) {
-    kprintf("IONDRVFramebufferPatched::attach\n");
+    kprintf("NVDAPatched::attach\n");
     bool ret = super::attach(provider);
-    kprintf("IONDRVFramebufferPatched::attach: %d\n", ret);
+    kprintf("NVDAPatched::attach: %d\n", ret);
     if (!ret) {
         ret = IOGraphicsDevice::attach(provider); // bypass AGDC find
-        kprintf("IONDRVFramebufferPatched::attach: %d (new)\n", ret);
+        kprintf("NVDAPatched::attach: %d (new)\n", ret);
     }
     return ret;
 }

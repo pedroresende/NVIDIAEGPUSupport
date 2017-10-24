@@ -12,6 +12,8 @@
 		CE75558F1F9EE89D008955F2 /* IONDRVFramebufferPatched.h in Headers */ = {isa = PBXBuildFile; fileRef = CE75558D1F9EE89D008955F2 /* IONDRVFramebufferPatched.h */; };
 		CE7555921F9EE989008955F2 /* NVDAPatched.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE7555901F9EE989008955F2 /* NVDAPatched.cpp */; };
 		CE7555931F9EE989008955F2 /* NVDAPatched.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7555911F9EE989008955F2 /* NVDAPatched.h */; };
+		CEDA46BE1F9FBC3700504F48 /* NVDATeslaPatched.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDA46BC1F9FBC3700504F48 /* NVDATeslaPatched.cpp */; };
+		CEDA46BF1F9FBC3700504F48 /* NVDATeslaPatched.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDA46BD1F9FBC3700504F48 /* NVDATeslaPatched.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		CE75558D1F9EE89D008955F2 /* IONDRVFramebufferPatched.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IONDRVFramebufferPatched.h; sourceTree = "<group>"; };
 		CE7555901F9EE989008955F2 /* NVDAPatched.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NVDAPatched.cpp; sourceTree = "<group>"; };
 		CE7555911F9EE989008955F2 /* NVDAPatched.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVDAPatched.h; sourceTree = "<group>"; };
+		CEDA46BC1F9FBC3700504F48 /* NVDATeslaPatched.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NVDATeslaPatched.cpp; sourceTree = "<group>"; };
+		CEDA46BD1F9FBC3700504F48 /* NVDATeslaPatched.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVDATeslaPatched.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				CE75558D1F9EE89D008955F2 /* IONDRVFramebufferPatched.h */,
 				CE7555901F9EE989008955F2 /* NVDAPatched.cpp */,
 				CE7555911F9EE989008955F2 /* NVDAPatched.h */,
+				CEDA46BC1F9FBC3700504F48 /* NVDATeslaPatched.cpp */,
+				CEDA46BD1F9FBC3700504F48 /* NVDATeslaPatched.h */,
 			);
 			path = NVDAEGPUSupport;
 			sourceTree = "<group>";
@@ -72,6 +78,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE7555931F9EE989008955F2 /* NVDAPatched.h in Headers */,
+				CEDA46BF1F9FBC3700504F48 /* NVDATeslaPatched.h in Headers */,
 				CE75558B1F9EE875008955F2 /* NVDA.h in Headers */,
 				CE75558F1F9EE89D008955F2 /* IONDRVFramebufferPatched.h in Headers */,
 			);
@@ -147,6 +154,7 @@
 			files = (
 				CE7555921F9EE989008955F2 /* NVDAPatched.cpp in Sources */,
 				CE75558E1F9EE89D008955F2 /* IONDRVFramebufferPatched.cpp in Sources */,
+				CEDA46BE1F9FBC3700504F48 /* NVDATeslaPatched.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

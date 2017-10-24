@@ -20,4 +20,11 @@ private:
     UInt64 data[50];
 };
 
+class NVDATesla : public IONDRVFramebuffer
+{
+    OSDeclareDefaultStructors(NVDATesla)
+private:
+    UInt64 data[46];
+};
+
 #endif /* NVDA_h */
