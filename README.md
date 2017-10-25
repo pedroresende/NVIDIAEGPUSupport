@@ -1,13 +1,16 @@
 NVDAEGPUSupport
 ===============
-This is a work-in-progress attempt to get NVIDIA Pascal eGPU cards to work under macOS High Sierra.
+This driver will allow your NVIDIA Web Drivers to work on High Sierra for eGPUs.
 
 ## Installation
 
 1. Download and install [NVIDIA Quadro & GeForce Web Drivers](http://www.nvidia.com/Download/index.aspx) (you do not have to modify any plists!)
-2. Disable [System Integrity Protection](https://developer.apple.com/library/content/documentation/Security/Conceptual/System_Integrity_Protection_Guide/ConfiguringSystemIntegrityProtection/ConfiguringSystemIntegrityProtection.html)
-3. Build and copy `NVDAEGPUSupport.kext` to `/Library/Extensions` and run `chown -R root:wheel NVDAEGPUSupport.kext`.
-4. Reboot (optionally re-enable SIP with `csrutil enable --without kext`)
+2. Disable [System Integrity Protection](https://developer.apple.com/library/content/documentation/Security/Conceptual/System_Integrity_Protection_Guide/ConfiguringSystemIntegrityProtection/ConfiguringSystemIntegrityProtection.html) (optionally just enable unsigned drivers with `csrutil enable --without kext`)
+3. Install this package
+
+## Uninstallation
+
+Just delete `/Library/Extensions/NVDAEGPUSupport.kext`. No other files are created/modified by the installer.
 
 ## Patches
 
