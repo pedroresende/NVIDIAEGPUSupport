@@ -13,7 +13,7 @@ if [[ ! -x /usr/bin/xcodebuild ]]; then
 fi
 
 echo "Building project..."
-#xcodebuild -project ${PROJECT} -scheme ${SCHEME} archive -archivePath ${TMP_ACHIVE}
+xcodebuild -project ${PROJECT} -scheme ${SCHEME} archive -archivePath ${TMP_ACHIVE}
 
 PLIST="${TMP}/build.plist"
 ROOT_PATH="${TMP_ACHIVE}/Products/"
