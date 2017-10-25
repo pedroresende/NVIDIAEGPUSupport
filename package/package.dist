@@ -22,7 +22,7 @@
     </choices-outline>
     <choice id="default"/>
     <choice id="lu.yifan.NVDAEGPUSupport" visible="false">
-        <pkg-ref id="lu.yifan.NVDAEGPUSupport" auth="Root" onConclusion="none"/>
+        <pkg-ref id="lu.yifan.NVDAEGPUSupport" auth="Root" onConclusion="RequireRestart"/>
     </choice>
-    <pkg-ref id="lu.yifan.NVDAEGPUSupport" auth="Root" onConclusion="none">NVDAEGPUSupportDriver.pkg</pkg-ref>
+    <pkg-ref id="lu.yifan.NVDAEGPUSupport" auth="Root" onConclusion="RequireRestart">NVDAEGPUSupportDriver.pkg</pkg-ref>
 </installer-gui-script>
