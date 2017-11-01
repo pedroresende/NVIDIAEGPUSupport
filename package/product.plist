@@ -14,7 +14,7 @@
 			<key>path</key>
 			<string>/Library/Extensions/NVDAStartupWeb.kext</string>
 			<key>CFBundleShortVersionString</key>
-			<string>10.25.28</string>
+			<string>10.27.6</string>
 		</dict>
 		<dict>
 			<key>id</key>
@@ -22,7 +22,7 @@
 			<key>path</key>
 			<string>/Library/Extensions/NVDAResmanWeb.kext</string>
 			<key>CFBundleShortVersionString</key>
-			<string>10.25.28</string>
+			<string>10.27.6</string>
 		</dict>
 		<dict>
 			<key>id</key>
@@ -30,7 +30,7 @@
 			<key>path</key>
 			<string>/Library/Extensions/NVDAResmanTeslaWeb.kext</string>
 			<key>CFBundleShortVersionString</key>
-			<string>10.25.28</string>
+			<string>10.27.6</string>
 		</dict>
 		<dict>
 			<key>id</key>
