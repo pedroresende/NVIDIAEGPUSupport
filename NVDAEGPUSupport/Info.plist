@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1.1</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>IOKitPersonalities</key>
@@ -39,7 +39,7 @@
 			<key>IOProviderClass</key>
 			<string>IOPCIDevice</string>
 			<key>NVDARequiredOS</key>
-			<string>17B48</string>
+			<string>17B1003</string>
 			<key>NVDAType</key>
 			<string>Web</string>
 		</dict>
