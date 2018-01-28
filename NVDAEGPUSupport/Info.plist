@@ -38,8 +38,6 @@
 			<integer>200000</integer>
 			<key>IOProviderClass</key>
 			<string>IOPCIDevice</string>
-			<key>NVDARequiredOS</key>
-			<string>17C205</string>
 			<key>NVDAType</key>
 			<string>Web</string>
 		</dict>
