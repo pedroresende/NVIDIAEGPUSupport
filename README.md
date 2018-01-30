@@ -6,7 +6,17 @@ This driver will allow your NVIDIA Web Drivers to work on High Sierra for eGPUs.
 
 1. Download and install [NVIDIA Quadro & GeForce Web Drivers](http://www.nvidia.com/Download/index.aspx) (you do not have to modify any plists!)
 2. Disable [System Integrity Protection](https://developer.apple.com/library/content/documentation/Security/Conceptual/System_Integrity_Protection_Guide/ConfiguringSystemIntegrityProtection/ConfiguringSystemIntegrityProtection.html) (optionally just enable unsigned drivers with `csrutil enable --without kext`)
-3. Install this package
+3. Install this package by `./package/build.sh`
+
+### Troubleshooting
+
+In case step 3 fails with 
+```
+Code Signing Error: No signing certificate "Mac Development" found
+```
+please update the settings in the project to use your personal (or team) signing certificate, as explained at
+https://help.apple.com/xcode/mac/current/#/dev01865b392
+
 
 ## Uninstallation
 
